@@ -1,3 +1,0 @@
-const randomDrink = (obj) => {
-    let 
-};
