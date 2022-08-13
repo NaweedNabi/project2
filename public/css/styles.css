@@ -1,0 +1,7 @@
+.drinks-table {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    aspect-ratio: 1;
+    background-color: pink;
+}

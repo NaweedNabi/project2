@@ -1,23 +1,32 @@
 const router = require('express').Router();
-const drinksAPI = 'www.thecocktaildb.com/api/json/v1/1/search.php?s='
+let drinksAPI = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 const randomDrinksAPI = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
 // const Cocktail = require('../../models/cocktails')
+// const searchTerm = document.querySelector('.searchTerm').value;
+// const searchButton = document.getElementById('searchBtn');
 
-router.get('/', async (req, res) => {
-    let drinkObj = await fetch(randomDrinksAPI)
-    let drinksObj = await drinkObj.json();
-    res.render('homepage', drinksObj.drinks[0]);
+router.get('/random-drink', async (req, res) => {
+    let randomDrink = await fetch(randomDrinksAPI)
+    let drinkObj = await randomDrink.json();
+    console.log(drinkObj);
+    console.log(drinkObj.drinks[0].idDrink)
+    res.render('random-drink', drinkObj.drinks[0]);
     // console.log(drinks)
 
     
 });
 
-// router.get('/searched-drink', async (req, res) => {
-//     let drinkObj = await fetch(drinksAPI)
-//     let drink = await drinkObj.json();
-//     res.json(drink);
+let searchTerm = 'Margarita';
+// drinksAPI += searchTerm
+console.log(drinksAPI+searchTerm)
+router.get('/searched-drink', async (req, res) => {
+    let searchDrink = await fetch(drinksAPI + searchTerm);
     
-// });
+    let drinkObj = await searchDrink.json();
+    console.log(drinkObj);
+    res.render('searched-drink', drinkObj.drinks[0]);
+    
+});
 
 // router.post('/', async (req, res) => {
 //     try { 
