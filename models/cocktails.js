@@ -1,5 +1,17 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const Sequelize = require("sequelizer");
+const db = require("../config/database");
+
+module.exports = (sequelize, Sequelize) => {
+const users = db.define("user", {
+  email: {
+    type: Sequelize.STRING
+  }
+})
+    return Users
+}
+
+// const { Model, DataTypes } = require('sequelize');
+// const sequelize = require('../config/connection');
 
 class Cocktail extends Model {}
 
