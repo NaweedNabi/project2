@@ -1,11 +1,22 @@
-const ingredientsArray = [];
-const ingredientsDisplay = document.getElementById('ingredients');
 
-for (let i = 1; i <= 15; i++){
-    if(drinkObj.strIngredients + i){
-    ingredientsArray.push(drinkObj.strIngredients + i)
-    }
+
+const drinksAPI = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
+const randomDrinksAPI = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
+
+
+
+const randomDrinkFunc = async () => {
+    let randomDrink = await fetch(randomDrinksAPI);
+    let response = await randomDrink.json();
+    let drinkObj = response.drinks[0];
+    // console.log(drinkObj);
+    return drinkObj;
 };
 
-ingredientsDisplay.innerHTML = ingredientsArray;
 
+
+
+
+
+
+module.exports = { randomDrinkFunc}
