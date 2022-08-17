@@ -1,14 +1,19 @@
-
-
-
-.body {
-    width: 200vw;
-    height: 200vh;
-
+html {
+    background: url(../media/bottlesss.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -150px;
 }
 
 
+
+
+
 .drinks-table {
+    background: url(../media/woodBack.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     width: 25%;
@@ -18,8 +23,9 @@
     color: white;
     font-weight: bolder;
     align-items: center;
-    border: solid 5px white;
+    border: solid 2px white;
     margin-inline-start: 35%;
+    border-radius: 5%;
 
 
 }
@@ -31,16 +37,26 @@
     width: 250px;
     aspect-ratio: 1;
     border: solid 5px white;
-    border-radius: 30%;
+    border-radius: 5%;
     
 }
 
+#searchBox {
+    
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 25%;
+    height: min-content;
+}
+
 .randomBtn {
-  background-color:white;
+ 
 }
 
 .searchTerm {
-    background-color: pink;
+    
+    padding: 40px;
     color:white;
 }
 
@@ -68,6 +84,10 @@
     width: max-content;
 }
 
+#ingredList li {
+    list-style: none;
+}
+
 .subTitle {
     align-items: center;
     text-align: center;
@@ -80,20 +100,81 @@
 #pageTitle {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 10%;
+    left: 10%;
     align-items: center;
+    color: white;
+    
+    
 }
 
 #pageTitle h1 {
-    font-size: 30px;
     font-weight: bolder;
+    position: relative;
+  text-transform: uppercase;
+  font-family: monospace;
+  font-size: 100px;
+  font-weight: 900;
+  text-decoration: none;
+  color: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -ms-background-clip: text;
+  -ms-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  background-image: linear-gradient(45deg, 
+                    #fdfdfd, 
+                    #d6d6d6,
+                    #ffffff,
+                    #ffffff);
+  animation: .8s shake infinite alternate;
+}
+
+@keyframes shake {
+  0% { transform: skewX(-4deg); }
+  5% { transform: skewX(4deg); }
+  10% { transform: skewX(-4deg); }
+  15% { transform: skewX(4deg); }
+  20% { transform: skewX(20deg); }
+  100% { transform: skewX(0deg); }  
 }
 
 #pageTitle p {
-    font-size: 15px;
+    font-size: 30px;
 }
 
 .cocktailSpan {
     position: relative;
     left: 47.3%;
     bottom: 188px;
+}
+
+#errorView {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+#signUpForm {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    position: fixed;
+    bottom:30%;
+    left: 10%;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: monospace;
+    color: rgb(255, 0, 0);
+    
+}
+
+.submitBtn {
+    background-color: red;
+    width: 40%;
 }

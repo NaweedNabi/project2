@@ -1,9 +1,10 @@
-<button class="randomBtn" onclick="window.location.href = '/random'">Get Drink!</button>
-<form action="/search" method="post">
+<div id="searchBox">
+<button class="randomBtn" onclick="window.location.href = '/drinks/random'">Get a random Drink!</button>
+<form action="/drinks/search" method="post" class="searchTerm">
   Search for a cocktail:
-    <input type="text" name="search" class="searchTerm" placeholder="Search for cocktail...">
-    
+    <input type="text" name="search"  placeholder="search by any ingredient">
 </form>
+</div>
 <link rel="stylesheet" href="/css/styles.css">
 <div class="drinks-table">
     <div id="title">{{ strDrink }}</div><br>

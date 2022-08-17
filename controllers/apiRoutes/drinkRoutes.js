@@ -7,13 +7,15 @@ let drinksAPI = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 // const searchTerm = document.querySelector('.searchTerm').value;
 // const searchButton = document.getElementById('searchBtn');
 
-
-router.get('/', (req, res) => {
-    res.render('homepage');
+router.get('/', async (req, res) => {
+    res.render('homepage')
 })
 
+router.get('/drinks', async (req, res) => {
+    res.render('drinkSearch')
+})
 
-router.get('/random', async (req, res) => {
+router.get('/drinks/random', async (req, res) => {
     let randomDrink = await randomDrinkFunc();
     // console.log(randomDrink);
     res.render('drinks', randomDrink);
@@ -25,10 +27,10 @@ router.get('/random', async (req, res) => {
 
 // drinksAPI += searchTerm
 // let searchTerm = 'vodka'
-router.post('/search', async (req, res) => {
+router.post('/drinks/search', async (req, res) => {
     let drinkObj = await fetch(drinksAPI + req.body.search);
     let response = await drinkObj.json();
-    let i = Math.floor(Math.random() * 8)
+    let i = Math.floor(Math.random() * response.drinks.length);
     let newDrink = response.drinks[i];
     res.render('drinks', newDrink);
 });
