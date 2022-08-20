@@ -1,80 +1,37 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Document</title>
 </head>
-
+<nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/users/home">profile</a>
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/users/login">login</a>
+        {{/if}}
+      
+</nav>
+    
 <body>
-    <section class="hero is-success is-fullheight">
-        <!-- Hero head: will stick at the top -->
-        <div class="hero-head">
-          <header class="navbar">
-            <div class="container">
-              <div class="navbar-brand">
-                <a class="navbar-item">
-                  <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
-                </a>
-                <span class="navbar-burger" data-target="navbarMenuHeroC">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </span>
-              </div>
-              <div id="navbarMenuHeroC" class="navbar-menu">
-                <div class="navbar-end">
-                  <a class="navbar-item is-active">
-                    Home
-                  </a>
-                  <a class="navbar-item">
-                    My Drinks
-                  </a>
-                  <a class="navbar-item">
-                    
-                  </a>
-                  <span class="navbar-item">
-                    <a class="button is-danger is-outlined">
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>Buzz Buzz News Feed</span>
-                    </a>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </header>
-        </div>
-      
-        <!-- Hero content: will be in the middle -->
-        <div class="hero-body">
-          <div class="container has-text-centered">
-            <p class="title">
-              BETTER BUZZ | DRINK FINDER
-            </p>
-            <p class="subtitle">
-              ________________
-            </p>
-          </div>
-        </div>
-      
-        <!-- Hero footer: will stick at the bottom -->
-        <div class="hero-foot">
-          <nav class="tabs is-boxed is-fullwidth">
-            <div class="container">
-              <ul>
-                <li class="is-active"><a>Drinks</a></li>
-                <li><a>Insert</a></li>
-                <li><a>Insert</a></li>
-                <li><a>Insert</a></li>
-                <li><a>Insert</a></li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </section>
+
+        
+     
+        
+ {{{ body }}}
+       
+
+
+{{#if logged_in}}
+<script src="/js/logout.js"></script>
+{{/if}}
+
+
 </body>
 </html>

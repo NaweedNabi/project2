@@ -1,0 +1,35 @@
+<div id="searchBox">
+<button class="randomBtn" onclick="window.location.href = '/drinks/random'">Get a random Drink!</button>
+<form action="/drinks/search" method="post" class="searchTerm">
+  Search for a cocktail:
+    <input type="text" name="search"  placeholder="search by any ingredient">
+</form>
+</div>
+{{!-- <link rel="stylesheet" href="/css/styles.css"> --}}
+<div class="drinks-table">
+    <div id="title">{{ strDrink }}</div><br>
+    Type: {{ strAlcoholic }}<br>
+  
+    <img id="pic"src="{{ strDrinkThumb }}">
+
+    <br><br>
+    
+    <ul id="ingredList">
+      <div class="subTitle">WHAT YOU'LL NEED:</div>
+      <li>{{ strIngredient1}}   {{strMeasure1}}</li>
+      <li>{{ strIngredient2}}   {{strMeasure2}}</li>
+      <li>{{ strIngredient3}}   {{strMeasure3}}</li>
+      <li>{{ strIngredient4}}   {{strMeasure4}}</li>
+      <li>{{ strIngredient5}}   {{strMeasure5}}</li>
+      <li>{{ strIngredient6}}   {{strMeasure6}}</li>
+      <li>{{ strIngredient7}}   {{strMeasure7}}</li>
+      <li>{{ strIngredient8}}   {{strMeasure8}}</li>
+    </ul><br>
+      <div class="subTitle">WHAT TO DO:</div>
+    <div id="instructions">{{ strInstructions }}</div><br></div>
+   
+
+
+ 
+</div>
+
