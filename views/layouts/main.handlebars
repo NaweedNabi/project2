@@ -9,13 +9,16 @@
     <title>Document</title>
 </head>
 <nav>
-    <ul>
-        <li>My Sips</li>
-        <li>Log In</li>
-    </ul>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="users/home">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/users/login">login</a>
+        {{/if}}
+      
 </nav>
-
-
+    
 <body>
         
      
@@ -23,5 +26,8 @@
       {{{ body }}}
        
 
+<script src="/js/login.js"></script>
+<script src="/js/logout.js"></script>
+<script src="/js/drinkObj.js"></script>
 </body>
 </html>

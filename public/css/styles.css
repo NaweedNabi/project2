@@ -1,3 +1,8 @@
+* {
+    font-family: monospace;
+}
+
+
 html {
     background: url(../media/bottlesss.jpg);
     background-repeat: no-repeat;
@@ -50,9 +55,20 @@ html {
     height: min-content;
 }
 
-.randomBtn {
- 
-}
+.no-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #1b89bc;
+    text-decoration: none;
+    font-size: 100%;
+  }
+  
+  .no-button:hover {
+    color: #065b83;
+    text-decoration: underline;
+  }
 
 .searchTerm {
     
@@ -62,7 +78,7 @@ html {
 
 
 #title {
-    font-size: 25px;
+    font-size: 40px;
     width: 100%;
     text-align: center;
 }
@@ -74,14 +90,16 @@ html {
     width: 100%;
     max-width: 75%;
     margin-left: 30px;
+    font-size: 20px;
 }
 
 #ingredList {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     padding-top: 5px;
     width: max-content;
+    font-size: 15px;
 }
 
 #ingredList li {
@@ -91,6 +109,7 @@ html {
 .subTitle {
     align-items: center;
     text-align: center;
+    font-size: 30px;
 }
 
 #form {
@@ -177,4 +196,16 @@ html {
 .submitBtn {
     background-color: red;
     width: 40%;
+}
+
+#navBar {
+    display: flex;
+    font-size: 20px;
+    flex-direction: row;
+    position: fixed;
+    top: 0px;
+    right: 5%;
+    gap: 50px;
+    font-family: monospace;
+    color: white;
 }

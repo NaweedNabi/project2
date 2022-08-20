@@ -1,4 +1,4 @@
-const { randomDrinkFunc, searchedDrinkFunc } = require('../../public/js/drinkObj.js');
+const { randomDrinkFunc } = require('../../public/js/drinkObj.js');
 const router = require('express').Router();
 let drinksAPI = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 // const randomDrinksAPI = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
