@@ -8,28 +8,20 @@ router.get('/home', (req, res) => {
 });
 
 router.post('/create', (req, res) => {
-	let request = req.body;
-	console.log(request);
-	User.create({
-		username: request.name,
-		email: request.email,
-		password: request.password
-	})
-		 .then(dbUserData => {
-			req.session.save(() => {
-				req.session.user_id = dbUserData.id;
-				req.session.username = dbUserData.username;
-				req.session.loggedIn = true;
-				
-				
-				console.log(dbUserData);
-			});
-		})
-		.catch(err => {
-			// console.log(err);
-			res.status(500).send('please complete all fields!');
-		});
-		
+	const userData = req.body;
+	console.log(userData)
+	try {
+		User.create(userData);
+
+		req.session.save(() => {
+			req.session.user_id = userData.id;
+			req.session.logged_in = true;
+	  
+			res.status(200).json(userData);
+		  });
+	}catch (err) {
+		res.status(500)
+	}
 });
 
 router.get('/login', (req, res) =>{

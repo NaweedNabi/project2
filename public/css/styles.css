@@ -65,7 +65,7 @@ html {
     font-size: 100%;
   }
   
-  .no-button:hover {
+.no-button:hover {
     color: #065b83;
     text-decoration: underline;
   }
