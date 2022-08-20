@@ -25,7 +25,10 @@ router.post('/create', (req, res) => {
 });
 
 router.get('/login', (req, res) =>{
-	res.render('login' );
+	if (req.session.logged_in) {
+		res.redirect('/homepage');
+		return;
+	}
 })
 
 router.post('/login', async (req, res) => {
@@ -53,7 +56,7 @@ router.post('/login', async (req, res) => {
 		req.session.user_id = userData.id;
 		req.session.logged_in = true;
 		console.log(userData)
-		res.render('drinkSearch', userData);
+		
 	  });
   
 	} catch (err) {
