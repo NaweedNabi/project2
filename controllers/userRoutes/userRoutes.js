@@ -25,10 +25,7 @@ router.post('/create', (req, res) => {
 });
 
 router.get('/login', (req, res) =>{
-	if (req.session.logged_in) {
-		res.redirect('/homepage');
-		return;
-	}
+	res.render('login')
 })
 
 router.post('/login', async (req, res) => {
