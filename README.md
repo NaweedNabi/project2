@@ -1,12 +1,12 @@
 
-### The Buzz
+# The Buzz
 
-# Purpose:
+## Purpose:
 
 A website providing users with a variety of cocktail recipes, both alcoholic and non alcoholic.
 
 
-# Built With
+## Built With
 
 - HTML
 - CSS
@@ -26,11 +26,11 @@ https://enigmatic-stream-09970.herokuapp.com/
 
 ## Contribution
 
-# Jasmine Chamblin 
+### Jasmine Chamblin 
 - https://github.com/Jasmine-Chamblin
-# Jenny Hall 
+### Jenny Hall 
 - https://github.com/jennychall
-# Jovani Gomez  
+### Jovani Gomez  
 - https://github.com/jovanigomez
 
 ## Project 2
