@@ -22,7 +22,7 @@ A website providing users with a variety of cocktail recipes, both alcoholic and
 https://enigmatic-stream-09970.herokuapp.com/
 
 ## Screenshot
-![image](../../Projects/project2/public/media/websitecover.jpg)
+![image](https://github.com/NaweedNabi/project2/blob/main/public/media/websitecover.jpg)
 
 ## Contribution
 
