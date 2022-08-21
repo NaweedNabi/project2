@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # The Buzz
 
 # Purpose:
@@ -31,3 +32,6 @@ https://enigmatic-stream-09970.herokuapp.com/
 - https://github.com/jennychall
 # Jovani Gomez  
 - https://github.com/jovanigomez
+=======
+## Project 2
+>>>>>>> f850800f0f9f9e7f3ad81612b6c708fa707eec50
